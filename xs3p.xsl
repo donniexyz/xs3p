@@ -369,6 +369,7 @@
                      <section id="SectionSchemaDeclarations">
                      <h2><a id="SchemaDeclarations">Global Declarations</a></h2>
                      <xsl:apply-templates select="xsd:attribute | xsd:element" mode="topSection">
+                        <xsl:sort select="@id" order="ascending"/>
                         <xsl:sort select="local-name(.)" order="ascending"/>
                         <xsl:sort select="@name" order="ascending"/>
                      </xsl:apply-templates>
@@ -379,6 +380,7 @@
                      <section id="SectionSchemaDefinitions">
                         <h2><a id="SchemaDefinitions">Global Definitions</a></h2>
                         <xsl:apply-templates select="xsd:attributeGroup | xsd:complexType | xsd:group | xsd:notation | xsd:simpleType" mode="topSection">
+                           <xsl:sort select="@id" order="ascending"/>
                            <xsl:sort select="local-name(.)" order="ascending"/>
                            <xsl:sort select="@name" order="ascending"/>
                         </xsl:apply-templates>
@@ -561,6 +563,7 @@
                <xsl:if test="xsd:attribute or xsd:element">
                   <li><a href="#SchemaDeclarations">Global Declarations</a></li>
                   <xsl:apply-templates select="xsd:attribute | xsd:element" mode="toc">
+                     <xsl:sort select="@id" order="ascending"/>
                      <xsl:sort select="local-name(.)" order="ascending"/>
                      <xsl:sort select="@name" order="ascending"/>
                   </xsl:apply-templates>
@@ -569,6 +572,7 @@
                <xsl:if test="xsd:attributeGroup or xsd:complexType or xsd:group or xsd:notation or xsd:simpleType">
                   <li><a href="#SchemaDefinitions">Global Definitions</a></li>
                   <xsl:apply-templates select="xsd:attributeGroup | xsd:complexType | xsd:group | xsd:notation | xsd:simpleType" mode="toc">
+                     <xsl:sort select="@id" order="ascending"/>
                      <xsl:sort select="local-name(.)" order="ascending"/>
                      <xsl:sort select="@name" order="ascending"/>
                   </xsl:apply-templates>
