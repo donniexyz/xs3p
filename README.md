@@ -9,6 +9,7 @@ more information.
 
 Added features include:
 
+ - **donniexyz added**: sort on elements based on @id ascending (was [ _local-name(.) asc, @name asc_ ] now [ _@id asc, local-name(.) asc, @name asc_ ])
  - Complete re-design using [Bootstrap](https://getbootstrap.com "Bootstrap homepage")
  - Output of UTF-8 encoded files
  - Output of HTML5
